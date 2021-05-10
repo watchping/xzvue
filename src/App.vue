@@ -1,15 +1,18 @@
 <template>
   <div id="app">
+    <my-header></my-header>
     <router-view></router-view>        
   </div>
 </template>
 
 <script>
-export default {   
-}
+
 </script>
 
 <style>
+/*
+所有页面都需要的css
+*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
