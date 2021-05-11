@@ -66,7 +66,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+
+
+  created() {
+    this.axios.get("/index").then(res=>{
+      console.log(res.data.carouselItems);
+      // var [p1,p2,p3] = res.data.recommendedItems;//数组解构
+
+    });
+  }
+};
 </script>
 
 <style>

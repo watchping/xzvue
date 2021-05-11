@@ -11,8 +11,8 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   routes: [
     { path: "/", component: Index },
-    { path: "/details", component: Details },
-    { path:"/products",component:Products},
+    { path: "/product/detail/:lid", component: Details ,props:true},
+    { path:"/product/list",component:Products},
 
     { path :"*",component:NotFound},
   ],

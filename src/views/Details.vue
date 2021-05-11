@@ -257,6 +257,24 @@
 
 <script>
 export default {
+  props:["lid"],//地址栏传过来的数据，自定获取
+
+  created(){
+    this.myLoad();
+  },
+  watch:{
+    lid(){
+      this.myLoad();
+    }
+  },
+  methods:{
+    myLoad(){
+      this.axios.get("product/detail",{params:{lid:this.lid}}).then(res=>{
+        console.log(res.data)
+
+      })
+    }
+  }
 
 }
 </script>
